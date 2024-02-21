@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/accountLogIn">
+    <fragment
+        android:id="@+id/accountLogIn"
+        android:name="org.meicode.loginapp.AccountLogIn"
+        android:label="fragment_account_log_in"
+        tools:layout="@layout/fragment_account_log_in" >
+        <action
+            android:id="@+id/action_accountLogIn_to_logInFragment"
+            app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/action_accountLogIn_to_viewFragment"
+            app:destination="@id/viewFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="org.meicode.loginapp.LogInFragment"
+        android:label="fragment_log_in2"
+        tools:layout="@layout/fragment_log_in2" >
+        <action
+            android:id="@+id/action_logInFragment_to_viewFragment"
+            app:destination="@id/viewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewFragment"
+        android:name="org.meicode.loginapp.ViewFragment"
+        android:label="fragment_view2"
+        tools:layout="@layout/fragment_view2" >
+        <action
+            android:id="@+id/action_viewFragment_to_showFragment"
+            app:destination="@id/showFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showFragment"
+        android:name="org.meicode.loginapp.ShowFragment"
+        android:label="fragment_show2"
+        tools:layout="@layout/fragment_show2" />
+</navigation>
